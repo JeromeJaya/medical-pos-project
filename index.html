@@ -41,7 +41,7 @@
     <h2>Manager Login</h2>
     <input type="text" placeholder="Username" id="mgrUsername">
     <input type="password" placeholder="Password" id="mgrPassword">
-    <button class="login-btn" onclick=signInManager()">Login</button>
+    <button class="login-btn" onclick="signInManager()">Login</button>
     <div class="options">
       <a href="#" data-page="manager">Create Account</a>
       <a href="#" onclick="redirectTo('forgotPassword')">Forgot Password?</a>
@@ -173,7 +173,7 @@
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          alert("Error: This account already, so you can login through employee login page
+          alert("Error: This account already, so you can login through employee login page")
         });
     }
     // Function to create an manager account
@@ -187,7 +187,7 @@
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          alert("Error: This account already, so you can login through manager login page
+          alert("Error: This account already, so you can login through manager login page")
         });
     }
 
