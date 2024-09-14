@@ -41,7 +41,7 @@
     <h2>Manager Login</h2>
     <input type="text" placeholder="Username" id="mgrUsername">
     <input type="password" placeholder="Password" id="mgrPassword">
-    <button class="login-btn">Login</button>
+    <button class="login-btn" onclick=signInManager()">Login</button>
     <div class="options">
       <a href="#" data-page="manager">Create Account</a>
       <a href="#" onclick="redirectTo('forgotPassword')">Forgot Password?</a>
@@ -115,7 +115,37 @@
 
           const errorMessage = error.message;
 
-          alert("Error: " + errorCode + " - " + errorMessage);
+          alert("Error: First you have to create your account");
+
+        });
+
+    }
+
+    window.signInManager= function() {
+
+      const email = document.getElementById('mgrUsername').value;
+
+      const password = document.getElementById('mgrPassword').value;
+
+
+      signInWithEmailAndPassword(auth, email, password)
+
+        .then((userCredential) => {
+          const user = userCredential.user;
+
+          alert("Welcome Manager: " + user.email);
+
+          // Redirect or other logic here
+
+        })
+
+        .catch((error) => {
+
+          const errorCode = error.code;
+
+          const errorMessage = error.message;
+
+          alert("Error: First you have to create your account");
 
         });
 
@@ -161,7 +191,21 @@
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          alert("Error: first you have to create your account before login " );
+          alert("Error: This account already, so you can login through employee login page
+        });
+    }
+    // Function to create an manager account
+    window.createManagerAccount = function() {
+      const email = document.getElementById('newManagerUsername').value;
+      const password = document.getElementById('newManagerPassword').value;
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => { 
+          alert("Manager account created successfully for " + email);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert("Error: This account already, so you can login through manager login page
         });
     }
 
