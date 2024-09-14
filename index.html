@@ -150,37 +150,19 @@
         });
 
     }
-
-
- window.sendPasswordReset = function() {
-
+    window.sendPasswordReset = function() {
       const email = document.getElementById('emailInput').value;
-
-
-      // Firebase method to send password reset email
-
+      // Firebase method to send password reset emaild
       sendPasswordResetEmail(auth, email)
-
         .then(() => {
-
           alert("Password reset email sent to " + email);
-
         })
-
         .catch((error) => {
-
           const errorCode = error.code;
-
           const errorMessage = error.message;
-
           alert("Error: " + errorCode + " - " + errorMessage);
-
         });
-
     }
-
-
-    // Function to create an employee account
     window.createEmployeeAccount = function() {
       const email = document.getElementById('newEmployeeUsername').value;
       const password = document.getElementById('newEmployeePassword').value;
