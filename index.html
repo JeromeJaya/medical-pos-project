@@ -27,8 +27,8 @@
   <!-- Employee Login Page -->
   <div class="login-page" id="employeeLogin">
     <h2>Employee Login</h2>
-    <input type="email" placeholder="jerome@gmail.com" id="empUsername">
-    <input type="password" placeholder="12345" id="empPassword">
+    <input type="email" placeholder="Employee email" id="empUsername">
+    <input type="password" placeholder="password" id="empPassword">
     <button class="login-btn" onclick="signInEmployee()">Login</button>
     <div class="options">
       <a href="#" data-page="employee">Create Account</a>
@@ -39,7 +39,7 @@
   <!-- Manager Login Page -->
   <div class="login-page" id="managerLogin">
     <h2>Manager Login</h2>
-    <input type="text" placeholder="Username" id="mgrUsername">
+    <input type="text" placeholder="Manager email ID" id="mgrUsername">
     <input type="password" placeholder="Password" id="mgrPassword">
     <button class="login-btn" onclick="signInManager()">Login</button>
     <div class="options">
@@ -47,8 +47,6 @@
       <a href="#" onclick="redirectTo('forgotPassword')">Forgot Password?</a>
     </div>
   </div>
-
-
   <!-- Forgot Password Page -->
   <div class="forgot-page" id="forgotPassword">
     <h2>Forgot Password</h2>
@@ -59,7 +57,7 @@
   <!-- Create Account Page for Employee -->
   <div class="create-account-page" id="createEmployeeAccount">
     <h2>Create Employee Account</h2>
-    <input type="text" placeholder="Employee Username" id="newEmployeeUsername">
+    <input type="text" placeholder="Employee email" id="newEmployeeUsername">
     <input type="password" placeholder="Employee Password" id="newEmployeePassword">
     <button class="login-btn" onclick="createEmployeeAccount()">Create Employee Account</button>
   </div>
@@ -67,7 +65,7 @@
   <!-- Create Account Page for Manager -->
   <div class="create-account-page" id="createManagerAccount">
     <h2>Create Manager Account</h2>
-    <input type="text" placeholder="Manager Username" id="newManagerUsername">
+    <input type="text" placeholder="Manager email" id="newManagerUsername">
     <input type="password" placeholder="Manager Password" id="newManagerPassword">
     <button class="login-btn" onclick="createManagerAccount()">Create Manager Account</button>
   </div>
