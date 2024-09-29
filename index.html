@@ -201,12 +201,7 @@
     }
 
     // Initial page setup
-    window.onload = () => {
-      document.getElementById('homePage').style.display = 'block';  // Show home page by default
-      document.querySelectorAll('.login-page, .forgot-page, .otp-page, .reset-page, .create-account-page').forEach(p => {
-        p.style.display = 'none';
-      });
-
+    
       document.getElementById('empLoginBtn').addEventListener('click', () => redirectTo('employeeLogin'));
       document.getElementById('mgrLoginBtn').addEventListener('click', () => redirectTo('managerLogin'));
 
