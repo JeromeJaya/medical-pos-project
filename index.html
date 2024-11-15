@@ -29,7 +29,7 @@
     <input type="password" placeholder="password" id="empPassword">
     <button class="login-btn" onclick="signInEmployee()">Login</button>
     <div class="options">
-      <a href="#" data-page="employee">Create Account</a>
+      <a href="#" data-page="employee" onclick="redirectTo('createEmployeeAccount')" >Create Account</a>
       <a href="#" onclick="redirectTo('forgotPassword')">Forgot Password?</a>
     </div>
   </div>
@@ -41,7 +41,7 @@
     <input type="password" placeholder="Password" id="mgrPassword">
     <button class="login-btn" onclick="signInManager()">Login</button>
     <div class="options">
-      <a href="#" data-page="manager">Create Account</a>
+      <a href="#" data-page="manager" onclick="redirectTo('createEmployeeAccount')">Create Account</a>
       <a href="#" onclick="redirectTo('forgotPassword')">Forgot Password?</a>
     </div>
   </div>
